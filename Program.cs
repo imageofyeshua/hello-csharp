@@ -1,9 +1,39 @@
-﻿using System.Runtime.InteropServices;
+﻿//using System.Runtime.InteropServices;
 
 class Program
 {
   static void Main()
   {
+    string userName = GetUserName();
+    Console.WriteLine($"{userName}, How high should I count?");
+    int chosenNumber = ReadNumber();
+    Count(chosenNumber);
+
+    string GetUserName()
+    {
+      while (true)
+      {
+        Console.Write("What is your name? ");
+        string name = Console.ReadLine();
+        if (name != "") // Empty string
+          return name;
+        Console.WriteLine("Let's try that again.");
+      }
+    }
+
+    void Count(int numberToCountTo)
+    {
+      for (int current = 1; current <= numberToCountTo; current++)
+        Console.WriteLine(current);
+    }
+
+    int ReadNumber()
+    {
+      string input = Console.ReadLine();
+      int number = Convert.ToInt32(input);
+      return number;
+    }
+    /*
     Console.WriteLine($"{42:#.##}");
     Console.WriteLine($"{42.1234:#.##}");
 
@@ -31,7 +61,6 @@ class Program
       Console.Write("\a");
     }
 
-    /*
     string name;
     Console.WriteLine("What is your name?");
     name = Console.ReadLine();
