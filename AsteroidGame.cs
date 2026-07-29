@@ -2,6 +2,10 @@ public class AsteroidGame
 {
   private Asteroid[] _asteroids;
 
+  public static AsteroidGame Current { get; set; }
+
+  public Asteroid[] Asteroids => _asteroids;
+
   public AsteroidGame()
   {
     _asteroids = new Asteroid[5];
