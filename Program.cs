@@ -4,6 +4,12 @@ class Program
 {
   static void Main()
   {
+    Season current;
+    current = Season.Summer;
+    Console.WriteLine($"Season: {current}");
+
+    int number = (int)Season.Fall;
+    /*
     int[] a = new int[] { 1, 2, 3 };
     int[] b = new int[] { 1, 2, 3 };
 
@@ -14,7 +20,6 @@ class Program
     string d = "Hel" + "lo";
     areEqual = (c == d);
     Console.WriteLine($"c equals d : {areEqual}");
-    /*
     string userName = GetUserName();
     Console.WriteLine($"{userName}, How high should I count?");
     int chosenNumber = ReadNumber();
