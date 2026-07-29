@@ -4,9 +4,10 @@ class Program
 {
   static void Main()
   {
+    Console.WriteLine("Hello, Daniel!");
+    /*
     AsteroidGame game = new AsteroidGame();
     game.Run();
-    /*
     Rectangle rect1 = Rectangle.CreateSquare(3);
 
     Console.WriteLine($"Square Area: {rect1.GetArea()}");
