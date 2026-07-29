@@ -7,6 +7,18 @@ class Program
     // Tuples
     var score = ("R2-D2", 12345, 153);
 
+    string name;
+    int points;
+    int level;
+
+    (int, int) a = (1, 2);
+    (int, int) b = (1, 2);
+    Console.WriteLine(a == b);
+    Console.WriteLine(a != b);
+
+    (name, points, level) = score;
+    Console.WriteLine($"{name} reached level {level} with {points} points.");
+
     Console.WriteLine($"Name:{score.Item1} Level:{score.Item2} Score:{score.Item3}");
 
     (string Name, int Points, int Level) elements = ("D3-R3", 6543, 12);
@@ -18,9 +30,28 @@ class Program
     (string, int P, int L) components = (Name: "R5-D5", Points: 7890, Level: 24);
     Console.WriteLine($"Name:{components.Item1} Level:{components.L} Score:{components.P}");
 
+    var result = GetScore();
+    DisplayScore(result);
+
+    var tuplesArray = CreateHighScores();
+
+    Console.WriteLine(tuplesArray[1].Name);
+
+    (string N, int P, int L) GetScore() => ("D6-R6", 15379, 78);
+
     void DisplayScore((string Name, int Points, int Level) score)
     {
       Console.WriteLine($"Name:{score.Name} Level:{score.Level} Score:{score.Points}");
+    }
+
+    (string Name, int Points, int Level)[] CreateHighScores()
+    {
+      return new (string, int, int)[3]
+      {
+        ("R8-D8", 13245, 14),
+        ("C-3PO", 5543, 9),
+        ("GONK", -1, 1),
+      };
     }
     /*
     Season current;
