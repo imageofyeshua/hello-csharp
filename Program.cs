@@ -4,6 +4,17 @@ class Program
 {
   static void Main()
   {
+    int[] a = new int[] { 1, 2, 3 };
+    int[] b = new int[] { 1, 2, 3 };
+
+    bool areEqual = (a == b);
+    Console.WriteLine($"a equals b : {areEqual}");
+
+    string c = "Hello";
+    string d = "Hel" + "lo";
+    areEqual = (c == d);
+    Console.WriteLine($"c equals d : {areEqual}");
+    /*
     string userName = GetUserName();
     Console.WriteLine($"{userName}, How high should I count?");
     int chosenNumber = ReadNumber();
@@ -33,7 +44,6 @@ class Program
       int number = Convert.ToInt32(input);
       return number;
     }
-    /*
     Console.WriteLine($"{42:#.##}");
     Console.WriteLine($"{42.1234:#.##}");
 
