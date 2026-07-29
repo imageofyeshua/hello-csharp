@@ -4,12 +4,19 @@ class Program
 {
   static void Main()
   {
+    Rectangle rectangle = new Rectangle(3, 4);
+    Console.WriteLine($"Area: {rectangle.GetArea()}");
+    rectangle.SetWidth(7);
+    Console.WriteLine($"Area: {rectangle.GetArea()}");
+
+    Circle circle = new Circle(5.3f);
+    Console.WriteLine($"Area: {circle.GetArea()}");
+    /*
     Score first = new Score();
     Score second = new Score("D2-R2", 1234, 12);
 
     Console.WriteLine(first._name);
     Console.WriteLine(second._name);
-    /*
     // Tuples
     var score = ("R2-D2", 12345, 153);
 
