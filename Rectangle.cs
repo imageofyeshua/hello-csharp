@@ -26,4 +26,6 @@ public class Rectangle
     _height = value;
     _area = _width * _height;
   }
+
+  public static Rectangle CreateSquare(float size) => new Rectangle(size, size);
 }

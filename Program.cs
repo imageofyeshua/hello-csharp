@@ -4,6 +4,12 @@ class Program
 {
   static void Main()
   {
+
+    Rectangle rect1 = Rectangle.CreateSquare(3);
+
+    Console.WriteLine($"Square Area: {rect1.GetArea()}");
+
+    /*
     Oval oval = new Oval(4, 9);
     Console.WriteLine($"Oval Area: {oval.Area}");
 
@@ -13,7 +19,6 @@ class Program
     Rhombus diamond = new Rhombus(5, 9);
     Console.WriteLine($"Rhombus Area: {diamond.Area}");
 
-    /*
     Rectangle rectangle = new Rectangle(3, 4);
     Console.WriteLine($"Area: {rectangle.GetArea()}");
     rectangle.SetWidth(7);
