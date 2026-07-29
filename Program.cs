@@ -4,6 +4,12 @@ class Program
 {
   static void Main()
   {
+    Score first = new Score();
+    Score second = new Score("D2-R2", 1234, 12);
+
+    Console.WriteLine(first._name);
+    Console.WriteLine(second._name);
+    /*
     // Tuples
     var score = ("R2-D2", 12345, 153);
 
@@ -53,7 +59,6 @@ class Program
         ("GONK", -1, 1),
       };
     }
-    /*
     Season current;
     current = Season.Summer;
     Console.WriteLine($"Season: {current}");
