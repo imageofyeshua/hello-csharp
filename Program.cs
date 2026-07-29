@@ -4,12 +4,30 @@ class Program
 {
   static void Main()
   {
+    // Tuples
+    var score = ("R2-D2", 12345, 153);
+
+    Console.WriteLine($"Name:{score.Item1} Level:{score.Item2} Score:{score.Item3}");
+
+    (string Name, int Points, int Level) elements = ("D3-R3", 6543, 12);
+    Console.WriteLine($"Name:{elements.Name} Level:{elements.Level} Score:{elements.Points}");
+
+    var items = (Name: "R4-D4", Points: 5678, Level: 3);
+    Console.WriteLine($"Name:{items.Name} Level:{items.Level} Score:{items.Points}");
+
+    (string, int P, int L) components = (Name: "R5-D5", Points: 7890, Level: 24);
+    Console.WriteLine($"Name:{components.Item1} Level:{components.L} Score:{components.P}");
+
+    void DisplayScore((string Name, int Points, int Level) score)
+    {
+      Console.WriteLine($"Name:{score.Name} Level:{score.Level} Score:{score.Points}");
+    }
+    /*
     Season current;
     current = Season.Summer;
     Console.WriteLine($"Season: {current}");
 
     int number = (int)Season.Fall;
-    /*
     int[] a = new int[] { 1, 2, 3 };
     int[] b = new int[] { 1, 2, 3 };
 
