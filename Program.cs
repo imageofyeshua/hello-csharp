@@ -4,12 +4,13 @@ class Program
 {
   static void Main()
   {
-
+    AsteroidGame game = new AsteroidGame();
+    game.Run();
+    /*
     Rectangle rect1 = Rectangle.CreateSquare(3);
 
     Console.WriteLine($"Square Area: {rect1.GetArea()}");
 
-    /*
     Oval oval = new Oval(4, 9);
     Console.WriteLine($"Oval Area: {oval.Area}");
 
