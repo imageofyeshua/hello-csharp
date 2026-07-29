@@ -4,6 +4,16 @@ class Program
 {
   static void Main()
   {
+    Oval oval = new Oval(4, 9);
+    Console.WriteLine($"Oval Area: {oval.Area}");
+
+    oval.MeasureA = 5;
+    Console.WriteLine($"Oval Area: {oval.Area}");
+
+    Rhombus diamond = new Rhombus(5, 9);
+    Console.WriteLine($"Rhombus Area: {diamond.Area}");
+
+    /*
     Rectangle rectangle = new Rectangle(3, 4);
     Console.WriteLine($"Area: {rectangle.GetArea()}");
     rectangle.SetWidth(7);
@@ -11,7 +21,6 @@ class Program
 
     Circle circle = new Circle(5.3f);
     Console.WriteLine($"Area: {circle.GetArea()}");
-    /*
     Score first = new Score();
     Score second = new Score("D2-R2", 1234, 12);
 
