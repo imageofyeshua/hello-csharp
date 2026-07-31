@@ -5,6 +5,12 @@ class Program
   static void Main()
   {
     Console.WriteLine("Hello, Daniel!");
+
+    object a = new object();
+    object b = a;
+    object c = new object();
+    Console.WriteLine(a.Equals(b));
+    Console.WriteLine(a.Equals(c));
     /*
     AsteroidGame game = new AsteroidGame();
     game.Run();
